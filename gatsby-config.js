@@ -10,6 +10,7 @@ module.exports = {
         image: '/ogImg.png'
     },
     plugins: [
+        `gatsby-plugin-netlify-cms`,
         `gatsby-plugin-layout`,
         `gatsby-plugin-typescript`,
         `gatsby-plugin-tslint`,
