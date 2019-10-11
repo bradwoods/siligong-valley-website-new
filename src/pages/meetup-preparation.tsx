@@ -3,11 +3,11 @@ import Page from "../components/Page";
 import Seo from "../components/Seo";
 
 export default () => {
-    const title = "Siligong Valley";
+    const title = "Meetup Preparation";
 
     return (
         <Page>
-            <Seo />
+            <Seo titleAddition={title} />
             {title}
         </Page>
     );
