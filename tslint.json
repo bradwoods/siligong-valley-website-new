@@ -1,0 +1,28 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+        "member-access": false,
+        "interface-name": false,
+        "max-line-length": false,
+        "arrow-parens": false,
+        "space-before-function-paren": false,
+        "variable-name": false,
+        "no-console": false,
+        "ordered-imports": [
+            true
+        ]
+    },
+    "rulesDirectory": [
+        "node_modules/tslint-microsoft-contrib"
+    ],
+    "linterOptions": {
+        "exclude": [
+            "**/*.js",
+            "**/*.json"
+        ]
+    }
+}

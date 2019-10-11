@@ -1,0 +1,14 @@
+# Logs
+yarn-debug.log*
+yarn-error.log*
+
+# Project dependencies
+node_modules
+.cache
+.idea
+
+# Build directory
+public
+
+.DS_Store
+npm-debug.log
