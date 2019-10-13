@@ -5,41 +5,59 @@ import { gridGuttersSize } from "../../util/grid";
 
 const Nav = styled.nav`
     width: 100%;
+    padding: 0 ${gridGuttersSize(1)};
 
     display: flex;
+    align-items: center;
 
     border-bottom: 1px solid black;
+`;
 
-    .link {
-        padding: ${gridGuttersSize(1)};
+const StyledLink = styled(Link)`
+    padding: ${gridGuttersSize(1)};
 
-        &.active {
-            color: ${p => p.theme.color.active};
-        }
+    &.active {
+        color: ${p => p.theme.color.active};
     }
 `;
 
-const links = [
+const RightLinksWrapper = styled.div`
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+`;
+
+const rightLinks = [
     {
-        displayText: "Landing",
+        displayText: "Home",
         to: "/",
     },
     {
-        displayText: "Page 2",
-        to: "/page2",
+        displayText: "Chapters",
+        to: "/chapters",
+    },
+    {
+        displayText: "Careers",
+        to: "/careers",
     },
 ];
 
 export default () => (
     <Nav>
-        {links.map(link => (
-            <Link
-                key={link.to}
-                to={link.to}
-                className="link"
-                activeClassName="active">
-                {link.displayText}
-            </Link>
-        ))}
+        <StyledLink to="/">
+            Siligong Valley
+        </StyledLink>
+
+        <RightLinksWrapper>
+            {rightLinks.map(link => (
+                <StyledLink
+                    key={link.to}
+                    to={link.to}
+                    activeClassName="active">
+                    {link.displayText}
+                </StyledLink>
+            ))}
+        </RightLinksWrapper>
     </Nav>
 );
